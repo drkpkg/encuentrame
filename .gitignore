@@ -1,0 +1,6 @@
+/config/secrets.yml
+/log/*
+!/log/.keep
+/tmp
+/config/mongoid.yml
+public/uploads

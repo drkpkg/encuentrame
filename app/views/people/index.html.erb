@@ -1,0 +1,36 @@
+<div class="row">
+  <% if @people.blank? %>
+    <div class="col-md-8">
+      <div class="alert alert-info" role="alert">
+        <strong><i class="fa fa-info fa-2x"></i></strong>
+        <%= t('no_data').capitalize %>
+      </div>
+    </div>
+  <% else %>
+      <% @people.each do |person| %>
+          <div class="col-md-2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <%= image_tag person.photo.url, class: 'image img-circle', size: '200x200' %>
+              </div>
+              <div class="panel-body">
+                <div class="form">
+                  <div class="form-group">
+                    <label><%= person.name %></label>
+                    -
+                    <label><%= person.age %></label>
+                    <br>
+                    <label><%= person.genre %></label>
+                    <div class="btn-group pull-right">
+                      <%= link_to people_info_path(id:person.id), class:"btn btn-success", data:{toggle:"tooltip", placement:"left"}, title: t('information') do %>
+                          <i class="fa fa-info"></i>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+  <% end %>
+</div>

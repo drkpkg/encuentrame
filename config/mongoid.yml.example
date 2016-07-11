@@ -1,0 +1,36 @@
+development:
+  clients:
+    default:
+      database: encuentrame_development
+      hosts:
+        - localhost:27017
+      options:
+
+  options:
+  #Nothing here right now
+test:
+  clients:
+    default:
+      database: encuentrame_test
+      hosts:
+        - localhost:27017
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
+
+production:
+  clients:
+    default:
+      hosts:
+        - localhost:27017
+      username: user
+      password: password
+      database: encuentrame
+      options:
+        consistency: :strong
+        max_retries: 30
+        retry_interval: 1
+        timeout: 15
+        safe: true
+        refresh_interval: 10
