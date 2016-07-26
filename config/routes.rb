@@ -12,12 +12,13 @@ Rails.application.routes.draw do
     get '/' => 'people#index', as: 'people_index'
     get 'info/' => 'people#info', as: 'people_info'
     get 'new' => 'people#new', as: 'people_new'
+    get ':id/generate' => 'people#generate', as: 'people_generate'
     post 'create' => 'people#create', as: 'people_create'
     post ':id/update' => 'people#update', as: 'people_update'
   end
 
   scope 'admin' do
-    # get 'config' => 'admin#config'
+    get 'config' => 'admin#config'
     post 'usuarios/id:/delete' => 'users#delete'
     post 'personas/id:/delete' => 'peple#delete'
   end

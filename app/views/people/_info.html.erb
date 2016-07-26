@@ -1,0 +1,73 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t('information').capitalize %>
+    <div class="pull-right btn-group">
+      <a href="#" class="btn btn-info btn-sm btn-back"><i class="fa fa-reply"></i></a>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-2">
+        <img id="photo" class="image img-circle" />
+      </div>
+      <div class="col-md-10">
+        <div class="form-group">
+          <div class="input-group" id="name">
+            <label><%= t('name').capitalize %>:</label>
+          </div>
+          <div class="input-group" id="age">
+            <label><%= t('age').capitalize %>:</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group" id="genre">
+            <label><%= t('genre').capitalize %>:</label>
+          </div>
+          <div class="input-group" id="stature">
+            <label><%= t('stature').capitalize %>:</label>
+          </div>
+          <div class="input-group" id="complextion">
+            <label><%= t('complextion').capitalize %>:</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group" id="country">
+            <label><%= t('country').capitalize %>:</label>
+          </div>
+          <div class="input-group" id="state">
+            <label><%= t('state').capitalize %>:</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-group">
+          <div class="input-group">
+            <label><%= t('last_location').capitalize %>:</label>
+            <a id="last-location" href="#"><%= t('open_map').capitalize %></a>
+            <div id="map-render"></div>
+          </div>
+          <div class="input-group" id="description">
+            <label><%= t('description').capitalize %>:</label>
+          </div>
+          <div class="input-group" id="contact-info">
+            <label><%= t('contact_info').capitalize %>:</label>
+            <ol>
+              <li id="email"><%= t('email').capitalize %>:</li>
+              <li id="phone"><%= t('phone_numbers').capitalize %>:</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="generate-doc" class="btn-group-justified"></div>
+  </div>
+</div>
+
+
+<!-- last_location: 'past location'
+description: 'description'
+contact_info: 'contact info'
+records: 'records'
+information: 'information' -->

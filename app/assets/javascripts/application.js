@@ -17,3 +17,11 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+  
+});
+
+function nominatum(location) {
+
+}

@@ -1,0 +1,27 @@
+$("#message").modal('hide');
+$("#people-render").hide();
+$("#person-info").empty();
+$("#person-info").append("<%= j render 'info' %>");
+
+$("#photo").attr('src',"<%= @person.photo.small.url %>");
+$("#name").append(" <%= @person.complete_name %>");
+$("#age").append(" <%= @person.age %>");
+$("#genre").append(" <%= @person.genre %>");
+$("#stature").append(" <%= @person.stature_in_cm %>");
+$("#complextion").append(" <%= @person.complextion_description %>");
+$("#country").append(" <%= @person.country_name %>");
+$("#state").append(" <%= @person.state_name %>");
+//$("#last-location").append("<%= @person.last_location %>");
+$("#description").append(" <%= @person.description %>");
+$("#email").append(" <%= @person.contact_info_email %>");
+$("#phone").append(" <%= @person.contact_info_phone_numbers %>");
+$("#generate-doc").append("<%= j link_to t('generate_information').capitalize, people_generate_path(@person.id), class:"btn btn-default" %>");
+
+$("#btn-back").on('click',function(){
+  $("#person-info").empty();
+  $("#people-render").show();
+});
+
+$("#last-location").on('click',function(){
+  alert('MAP!!');
+});

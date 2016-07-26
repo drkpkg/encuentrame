@@ -1,4 +1,5 @@
 # encoding: utf-8
+require "mini_magick"
 
 class PersonUploader < CarrierWave::Uploader::Base
 
@@ -11,11 +12,11 @@ class PersonUploader < CarrierWave::Uploader::Base
   end
 
   version :small do
-    process :resize_to_fit => [200,200]
+    process :resize_to_fit => [200,nil]
   end
 
   version :thumb do
-     process :resize_to_fit => [50,50]
+     process :resize_to_fit => [100,nil]
   end
 
   def extension_white_list

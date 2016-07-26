@@ -33,6 +33,16 @@ class PeopleController < ApplicationController
     redirect_to people_index_path
   end
 
+  def generate
+    # @pdf = WickedPdf.new.pdf_from_string('<h1>Hello There!</h1>')
+    # respond_to do |format|
+    #   format.html
+    #   format.pdf do
+    #     render pdf: @pdf   # Excluding ".pdf" extension.
+    #   end
+    # end
+  end
+
   private
 
   def params_for_search

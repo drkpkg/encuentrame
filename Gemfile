@@ -17,13 +17,14 @@ gem 'bson_ext'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'responders'
-gem 'mini_magick'
+gem 'mini_magick', '~> 3.6.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-twitter"
 gem 'city-state'
 gem 'font-awesome-rails'
+gem 'wicked_pdf'
 
 group :development, :test do
   gem 'byebug'
@@ -35,4 +36,3 @@ group :development do
   gem 'capistrano-rails'
   gem 'web-console', '~> 2.0'
 end
-

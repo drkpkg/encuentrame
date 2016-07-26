@@ -16,7 +16,7 @@ Person.create(photo: ActionDispatch::Http::UploadedFile.new(:tempfile => File.ne
               lastname: 'Gutierrez',
               age: 9,
               sex: 'm', country: 'BO',
-              state: 'BO-S', city: '',
+              state: 'B', city: '',
               last_location:[-17.7456355,-63.1207882],
               description:'Some description',
               contact_info: {email: 'email@server.com', phone:[1234567,8765443]})
@@ -28,7 +28,7 @@ Person.create(photo: ActionDispatch::Http::UploadedFile.new(:tempfile => File.ne
               lastname: 'Perez Cera',
               age: 18,
               sex: 'm', country: 'BO',
-              state: 'BO-S', city: '',
+              state: 'S', city: '',
               last_location:[-17.7456355,-63.1207882],
               description:'Some description',
               contact_info: {email: 'email@server.com', phone:[1234567,8765443]})
@@ -40,7 +40,7 @@ Person.create(photo: ActionDispatch::Http::UploadedFile.new(:tempfile => File.ne
               lastname: 'Martinez Cordova',
               age: 22,
               sex: 'f', country: 'BO',
-              state: 'BO-S', city: '',
+              state: 'S', city: '',
               last_location:[-17.7456355,-63.1207882],
               description:'Some description',
               contact_info: {email: 'email@server.com', phone:[1234567,8765443]})

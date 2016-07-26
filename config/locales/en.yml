@@ -21,11 +21,31 @@
 
 en:
   find_me: 'find me'
-  name: 'Name'
-  age: 'Age'
-  information: 'Information'
-  no_data: "No data"
-  male: "male"
-  female: "female"
-  people: "people"
-  search: "search"
+  name: 'name'
+  age: 'age'
+  genre: 'genre'
+  stature: 'stature'
+  complextion: 'complextion'
+  country: 'country'
+  state: 'state'
+  city: 'city'
+  last_location: 'last location'
+  description: 'description'
+  contact_info: 'contact info'
+  records: 'records'
+  information: 'information'
+  male: 'male'
+  female: 'female'
+  people: 'people'
+  thin: 'thin'
+  normal: 'normal'
+  obese: 'obese'
+  search: 'search'
+  loading: 'loading'
+  open_map: 'open map'
+  no_data: 'no data'
+  not_defined: 'not defined'
+  phone_numbers: 'phone numbers'
+  email: 'email'
+  i_have_information: "i have information"
+  generate_information: "generate document"
