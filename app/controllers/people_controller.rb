@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_action :set_person, only: [:info, :update, :delete]
+  before_action :set_person, only: [:info, :update, :delete, :generate]
 
   def index
     @people = Person.where(params_for_search)
@@ -34,13 +34,9 @@ class PeopleController < ApplicationController
   end
 
   def generate
-    # @pdf = WickedPdf.new.pdf_from_string('<h1>Hello There!</h1>')
-    # respond_to do |format|
-    #   format.html
-    #   format.pdf do
-    #     render pdf: @pdf   # Excluding ".pdf" extension.
-    #   end
-    # end
+    render :pdf => "#{@person.complete_name.parameterize}",
+           :layout => 'pdf.html.erb',
+           encoding: 'utf8'
   end
 
   private

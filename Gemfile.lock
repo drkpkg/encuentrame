@@ -264,6 +264,7 @@ GEM
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
     wicked_pdf (1.0.6)
+    wkhtmltopdf-binary (0.12.3)
 
 PLATFORMS
   ruby
@@ -298,6 +299,7 @@ DEPENDENCIES
   unicorn
   web-console (~> 2.0)
   wicked_pdf
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    1.12.5

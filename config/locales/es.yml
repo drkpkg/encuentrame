@@ -49,3 +49,8 @@ es:
   phone_numbers: 'teléfono(s)'
   i_have_information: "tengo información"
   generate_information: "generar documento"
+  basic_information: "información básica"
+  lost: "extraviado"
+  aditional_information: "información adicional"
+  date_of_lost: "fecha de extravío"
+  generated_by_find_me_app: "generado por la app encuentrame"

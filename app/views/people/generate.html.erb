@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="text-center">
+    <h1><%= t('lost').upcase %></h1>
+  </div>
+  <div class="text-center">
+    <%= wicked_pdf_image_tag(@person.photo.url, class:"image img-circle", size:"250x250") %>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <%= t('basic_information').capitalize %>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label><%= t('name').capitalize %>:</label>
+            <div class="form-control"><%= @person.complete_name %></div>
+          </div>
+          <div class="form-group">
+            <label><%= t('genre').capitalize %>:</label>
+            <div class="form-control"><%= @person.genre %></div>
+          </div>
+          <div class="form-group">
+            <label><%= t('stature').capitalize %>:</label>
+            <div class="form-control"><%= @person.stature_in_cm %></div>
+          </div>
+          <div class="form-group">
+            <label><%= t('age').capitalize %>:</label>
+            <div class="form-control"><%= @person.age %></div>
+          </div>
+          <div class="form-group">
+            <label><%= t('complextion').capitalize %>:</label>
+            <div class="form-control"><%= @person.complextion %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="panel panel-danger">
+        <div class="panel-heading"><%= t('aditional_information').capitalize %></div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label><%= t('date_of_lost').capitalize %>:</label>
+            <div class="form-control"></div>
+          </div>
+          <div class="form-group">
+            <label><%= t('last_location').capitalize %>:</label>
+            <div class="form-control"><%= @person.last_location %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

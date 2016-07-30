@@ -1,0 +1,11 @@
+<html>
+<head>
+  <title><%= @person.complete_name %></title>
+  <%= wicked_pdf_stylesheet_link_tag "pdf"%>
+</head>
+<body>
+
+<%= yield %>
+<footer><%= t('generated_by_find_me_app').capitalize %></footer>
+</body>
+</html>

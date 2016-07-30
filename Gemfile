@@ -25,6 +25,7 @@ gem "omniauth-twitter"
 gem 'city-state'
 gem 'font-awesome-rails'
 gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 group :development, :test do
   gem 'byebug'
