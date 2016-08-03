@@ -54,3 +54,8 @@ es:
   aditional_information: "información adicional"
   date_of_lost: "fecha de extravío"
   generated_by_find_me_app: "generado por la app encuentrame"
+  last_name: "apellido(s)"
+  location_info: "información de zona"
+  description_and_contact: "descripción y contacto"
+  cancel: "cancelar"
+  save: "guardar"

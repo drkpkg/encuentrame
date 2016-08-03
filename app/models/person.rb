@@ -68,12 +68,25 @@ class Person
     end
   end
 
+  def contact_info_hash=(array_of_data)
+    self.contact_info[:email] = array_of_data[0]
+    self.contact_info[:phone] = array_of_data[1]
+  end
+
   def contact_info_email
-    return self.contact_info['email']
+    begin
+      return self.contact_info['email']
+    rescue
+      return "#{I18n.t('not_defined')}"
+    end
   end
 
   def contact_info_phone_numbers
-    return self.contact_info['phone'].join(' - ')
+    begin
+      return self.contact_info['phone'].join(' - ')
+    rescue
+      return "#{I18n.t('not_defined')}"
+    end
   end
 
 end

@@ -18,10 +18,12 @@
 //= require bootstrap
 //= require_tree .
 
-$(document).ready(function(){
-  
-});
+var API = '/api/v1/utils/'
 
-function nominatum(location) {
-
-}
+//$(document).ready(function(){
+//
+//});
+//
+//function nominatum(location) {
+//
+//}

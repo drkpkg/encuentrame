@@ -22,4 +22,14 @@ Rails.application.routes.draw do
     post 'usuarios/id:/delete' => 'users#delete'
     post 'personas/id:/delete' => 'peple#delete'
   end
+
+  scope 'api' do
+    scope 'v1' do
+      scope 'utils' do
+        get 'countries' => 'utils#countries'
+        get 'cities' => 'utils#cities'
+        get 'states' => 'utils#states'
+      end
+    end
+  end
 end

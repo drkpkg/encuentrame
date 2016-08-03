@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <%= form_for @person, url: people_create_path do |f| %>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><%= t('basic_information').capitalize %></div>
+        <div class="panel-body">
+          <div class="col-md-3">
+            <div class="form-group">
+              <%= f.file_field :photo, class:'btn btn-default' %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_name"><%= t('name').capitalize %></label>
+              <%= f.text_field :name, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_lastname"><%= t('last_name').capitalize %></label>
+              <%= f.text_field :lastname, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-group">
+              <label for="person_age"><%= t('age').capitalize %></label>
+              <%= f.number_field :age, class: 'form-control', step: '1', value: 0, min: 0, max: 100 %>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-group">
+              <label for="person_sex"><%= t('genre').capitalize %></label>
+              <%= f.select :sex,{},{ include_blank: true, :selected => true, disabled: true },{class: 'form-control'} do %>
+                <option value="m"><%= t('male').capitalize %></option>
+                <option value="f"><%= t('female').capitalize %></option>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading"><%= t('location_info').capitalize %></div>
+        <div class="panel-body">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_country"><%= t('country').capitalize %></label>
+              <%= f.select :country,
+                           CS.countries.collect { |c| [c[1],c[0]] },
+                           { include_blank: true, :selected => true, disabled: true },
+                           {class: 'form-control country-select'} %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_state"><%= t('state').capitalize %></label>
+              <%= f.select :state, {},{},{class:'form-control state-select', disabled:true} %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_city"><%= t('city').capitalize %></label>
+              <%= f.select :city, {},{},{class:'form-control city-select', disabled:true} %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading"><%= t('description_and_contact').capitalize %></div>
+        <div class="panel-body">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_description"><%= t('description').capitalize %></label>
+              <%= f.text_area :description, class:'form-control' %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_email"><%= t('email').capitalize %></label>
+              <%= f.text_field :contact_info_hash, name:'person[contact_info][email]', class:'form-control' %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="person_description"><%= t('phone_numbers').capitalize %></label>
+              <%= f.number_field :contact_info_hash, name:'person[contact_info][phone_numbers][]', class:'form-control', value: 0, min: 0 %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="btn-group">
+          <%= link_to t('cancel').capitalize,people_index_path, class:'btn btn-danger' %>
+          <%= f.submit t('save').capitalize, class:'btn btn-success' %>
+        </div>
+      </div>
+  <% end %>
+</div>

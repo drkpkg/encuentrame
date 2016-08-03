@@ -15,7 +15,7 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(params_for_create)
     if @person.save
-      redirect_to info_path(@person)
+      redirect_to people_index_path
     else
       flash[:error] = @person.errors
       redirect_to root_path
@@ -46,7 +46,7 @@ class PeopleController < ApplicationController
   end
 
   def params_for_create
-    params.require(:person).permit(:name, :lastname, :age, :sex, :country, :state, :city, :last_location, :description, :contact_info, :photo)
+    params.require(:person).permit(:name, :lastname, :age, :sex, :country, :state, :city, :last_location, :description, :contact_info_hash, :photo)
   end
 
   def params_for_update
