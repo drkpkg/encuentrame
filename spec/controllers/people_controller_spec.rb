@@ -30,25 +30,37 @@ RSpec.describe PeopleController, type: :controller do
     end
   end
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+  describe "Post #create" do
+    it "redirects to people index" do
+      post :create, person: {:name => 'Ariel',
+                             :lastname => 'Vega',
+                             :age => 28,
+                             :sex => 'm',
+                             :country => 'BO',
+                             :state => 'S',
+                             :city => '3',
+                             :last_location => [0.0,0.0],
+                             :description => 'Estaba saliendo de la U cuando zas se lo llevaron',
+                             :contact_info_hash => {email:"email@server.com", phone: [1234567, 8765443]},
+                             :photo => @hombre,
+                             :complextion => 'normal',
+                             :stature => '1.73'}
+      expect(response).to have_http_status(:created)
     end
   end
 
-  describe "GET #update" do
-    it "returns http success" do
-      get :update
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET #delete" do
-    it "returns http success" do
-      get :delete
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # describe "PATCH #update" do
+  #   it "returns http success" do
+  #     get :update
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
+  #
+  # describe "GET #delete" do
+  #   it "redirects to people index" do
+  #     delete :delete
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
 
 end
