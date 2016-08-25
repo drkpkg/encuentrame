@@ -19,7 +19,7 @@ class Person
 
   mount_uploader :photo, PersonUploader
 
-  validates_presence_of :name, :lastname, :age, :sex, :complextion, :stature, :country, :state, :city, :description, :contact_info, message: "#{I18n.t('blank_fields').capitalize}"
+  validates_presence_of :name, :lastname, :age, :sex, :complextion, :stature, :country, :state, :city, :description, message: "#{I18n.t('blank_fields').capitalize}"
 
   def complete_name
     "#{self.name} #{self.lastname}"
