@@ -15,10 +15,10 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(params_for_create)
     if @person.save
-      redirect_to people_index_path
+      redirect_to people_index_path, status: :created
     else
       flash[:error] = @person.errors
-      redirect_to people_new_path
+      redirect_to people_new_path, status: :bad_request
     end
   end
 
@@ -42,15 +42,30 @@ class PeopleController < ApplicationController
   private
 
   def params_for_search
-    params.permit(:country,:state,:city)
+    params.permit(:country,
+                  :state,
+                  :city)
   end
 
   def params_for_create
-    params.require(:person).permit(:name, :lastname, :age, :sex, :country, :state, :city, :last_location, :description, :contact_info_hash, :photo)
+    params.require(:person).permit(:name,
+                                   :lastname,
+                                   :age,
+                                   :sex,
+                                   :country,
+                                   :state,
+                                   :city,
+                                   :last_location,
+                                   :description,
+                                   :contact_info_hash,
+                                   :photo,
+                                   :complextion,
+                                   :stature)
   end
 
   def params_for_update
-    params.require(:person).permit(:new_location, :additional_description)
+    params.require(:person).permit(:new_location,
+                                   :additional_description)
   end
 
   def set_person
