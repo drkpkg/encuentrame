@@ -18,7 +18,7 @@ class PeopleController < ApplicationController
       redirect_to people_index_path
     else
       flash[:error] = @person.errors
-      redirect_to root_path
+      redirect_to people_new_path
     end
   end
 

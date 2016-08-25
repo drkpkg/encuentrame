@@ -6,6 +6,7 @@
         <div class="panel-body">
           <div class="col-md-3">
             <div class="form-group">
+              <label for="person_photo"><%= t('photo').capitalize %></label>
               <%= f.file_field :photo, class:'btn btn-default' %>
             </div>
           </div>
@@ -76,7 +77,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="person_email"><%= t('email').capitalize %></label>
-              <%= f.text_field :contact_info_hash, name:'person[contact_info][email]', class:'form-control' %>
+              <%= f.text_field :contact_info, name:'person[contact_info][email]', class:'form-control' %>
             </div>
           </div>
           <div class="col-md-3">

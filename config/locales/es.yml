@@ -59,3 +59,5 @@ es:
   description_and_contact: "descripción y contacto"
   cancel: "cancelar"
   save: "guardar"
+  photo: "fotografía"
+  blank_fields: "los campos no pueden estar vacíos, rellene los campos e intente de nuevo"
