@@ -3,25 +3,25 @@
 === Aplicación web para personas desaparecidas
 
 * Ruby version
- - 4.2.6
+  - 4.2.6
 
 * Dependencias
 
- - Solo será requerido Bcrypt para los usuarios
+  - Solo será requerido Bcrypt para los usuarios
 
 * Configuración
 
- - Configurar el archivo secrets.yml y mongoid.yml (Ver los archivos examples)
- - rake db:seed
- - rails s --bind 0.0.0.0
+  - Configurar el archivo secrets.yml y mongoid.yml (Ver los archivos examples)
+  - rake db:seed
+  - rails s --bind 0.0.0.0
 
 * Base de datos
 
- - Usa mongoDB, en desarrollo no será necesaria configuración más que el servicio corriendo
+  - Usa mongoDB, en desarrollo no será necesaria configuración más que el servicio corriendo
 
 * RSpec
 
- - bundle exec rspec spec/controllers
+  - bundle exec rspec spec/controllers
 
 * Servicios
 
