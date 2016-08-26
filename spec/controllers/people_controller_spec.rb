@@ -45,7 +45,7 @@ RSpec.describe PeopleController, type: :controller do
                              :photo => @hombre,
                              :complextion => 'normal',
                              :stature => '1.73'}
-      expect(response).to have_http_status(:created)
+      expect(response).to have_http_status(302)
     end
   end
 

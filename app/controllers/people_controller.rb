@@ -15,10 +15,10 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(params_for_create)
     if @person.save
-      redirect_to people_index_path, status: :created
+      redirect_to people_index_path
     else
       flash[:error] = @person.errors
-      redirect_to people_new_path, status: :bad_request
+      redirect_to people_new_path
     end
   end
 

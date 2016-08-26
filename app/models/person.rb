@@ -53,21 +53,22 @@ class Person
   end
 
   def stature_in_cm
-    return "#{self.stature * 100} cm" if !self.stature.nil?
+    return "#{self.stature.to_i} cm" if !self.stature.nil?
     return "#{I18n.t('not_defined')}" if self.stature.nil?
   end
 
   def complextion_description
-    case self.complextion
-      when 0
-        return "#{I18n.t('thin')}"
-      when 1
-        return "#{I18n.t('normal')}"
-      when 2
-        return "#{I18n.t('obese')}"
-      else
-        return "#{I18n.t('not_defined')}"
-    end
+    return "#{I18n.t(self.complextion).capitalize}"
+    # case
+    #   when 'thin'
+    #     return "#{I18n.t('thin')}"
+    #   when 1
+    #     return "#{I18n.t('normal')}"
+    #   when 2
+    #     return "#{I18n.t('obese')}"
+    #   else
+    #     return "#{I18n.t('not_defined')}"
+    # end
   end
 
   def contact_info_hash=(array_of_data)

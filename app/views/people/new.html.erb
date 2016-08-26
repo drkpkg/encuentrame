@@ -10,13 +10,13 @@
               <%= f.file_field :photo, class:'btn btn-default' %>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <div class="form-group">
               <label for="person_name"><%= t('name').capitalize %></label>
               <%= f.text_field :name, class: 'form-control' %>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <div class="form-group">
               <label for="person_lastname"><%= t('last_name').capitalize %></label>
               <%= f.text_field :lastname, class: 'form-control' %>
@@ -30,10 +30,26 @@
           </div>
           <div class="col-md-1">
             <div class="form-group">
+              <label for="person_age"><%= t('stature').capitalize %></label>
+              <%= f.number_field :stature, class: 'form-control', step: '1', value: 0, min: 0, max: 250 %>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-group">
               <label for="person_sex"><%= t('genre').capitalize %></label>
               <%= f.select :sex,{},{ include_blank: true, :selected => true, disabled: true },{class: 'form-control'} do %>
                 <option value="m"><%= t('male').capitalize %></option>
                 <option value="f"><%= t('female').capitalize %></option>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-group">
+              <label for="person_sex"><%= t('complextion').capitalize %></label>
+              <%= f.select :complextion,{},{ include_blank: true, :selected => true, disabled: true },{class: 'form-control'} do %>
+                  <option value="thin"><%= t('thin').capitalize %></option>
+                  <option value="normal"><%= t('normal').capitalize %></option>
+                  <option value="obese"><%= t('obese').capitalize %></option>
               <% end %>
             </div>
           </div>
